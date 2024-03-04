@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "819695729268",
+    "project_id": "socialhub-f4f72",
+    "storage_bucket": "socialhub-f4f72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819695729268:android:b881cbf3ef1f39351f2f21",
+        "android_client_info": {
+          "package_name": "com.claudylab.socialhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVIfw8tWPWrzseaxham15aB_r94URcAs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

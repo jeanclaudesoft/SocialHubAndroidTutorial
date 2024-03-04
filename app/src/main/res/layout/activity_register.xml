@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".ui.activities.LoginActivity">
+    tools:context=".ui.activities.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,102 +15,120 @@
             android:id="@+id/imgLogo"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/logo"
-            android:scaleType="centerCrop"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
-           android:layout_gravity="center"
-            />
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Se Connecter"
             android:layout_gravity="center"
-            android:textSize="26sp"
+            android:fontFamily="@font/gilroy_bold"
             android:padding="10dp"
+            android:text="Inscrivez-vous"
             android:textAllCaps="true"
-            android:fontFamily="@font/gilroy_bold"/>
+            android:textSize="26sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
-            app:boxCornerRadiusTopStart="12dp"
-            android:layout_margin="20dp">
+            app:boxCornerRadiusTopStart="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gilroy_medium"
+                android:hint="Nom d'utilisateur..." />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Adresse mail..."
                 android:fontFamily="@font/gilroy_medium"
-                android:inputType="textEmailAddress"/>
+                android:hint="Adresse mail..."
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
-            android:layout_marginStart="20dp"
-            app:passwordToggleEnabled="true"
-            android:layout_marginEnd="20dp">
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtPassword"
+                android:id="@+id/edtPssword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Mot de passe..."
                 android:fontFamily="@font/gilroy_medium"
-                android:inputType="textPassword"/>
+                android:hint="Mot de passe..."
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:padding="16dp"
-            android:text="Connexion"
             android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
             android:fontFamily="@font/gilroy_semibold"
+            android:padding="16dp"
+            android:text="S'Inscrire"
             android:textSize="20sp"
-            app:cornerRadius='12dp'/>
+            app:cornerRadius='12dp' />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vous n'avez pas encore de compte?"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/gilroy_regular"
+            android:gravity="center"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/gilroy_regular"/>
+            android:text="Vous avez deja un compte?"
+            android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnLogin"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:padding="16dp"
-            android:text="Inscrivez-vous"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="25dp"
             android:fontFamily="@font/gilroy_medium"
+            android:padding="16dp"
+            android:text="Connectez-vous"
             android:textAllCaps="false"
             android:textSize="18sp"
-            app:cornerRadius='12dp'/>
+            app:cornerRadius='12dp' />
 
     </LinearLayout>
-
 
 </RelativeLayout>
